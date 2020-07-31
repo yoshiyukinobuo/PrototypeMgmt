@@ -1,0 +1,25 @@
+<script setup>
+import { ref, onMounted } from 'vue'
+import { api } from '../api'
+const d = ref(null), error = ref('')
+onMounted(async () => { try { d.value = await api('/dashboard') } catch (e) { error.value = e.message } })
+</script>
+
+<template>
+  <h1>Dashboard</h1>
+  <p v-if="error" class="err">{{ error }}</p>
+  <template v-if="d">
+    <div class="stats">
+      <div class="panel"><b>{{ d.open_requests }}</b>Requests waiting</div>
+      <div class="panel"><b>{{ d.active_lots }}</b>Lots in progress</div>
+      <div class="panel"><b>{{ d.open_issues }}</b>Open issues</div>
+      <div class="panel"><b>{{ d.failed_units }}</b>Failed units</div>
+    </div>
+    <h2>Lots by stage</h2>
+    <p v-if="!d.lots_by_stage.length" class="muted">No lots yet. Create one under Lots.</p>
+    <table v-else>
+      <tr><th>Stage</th><th>Lots</th></tr>
+      <tr v-for="s in d.lots_by_stage" :key="s.stage"><td>{{ s.stage }}</td><td>{{ s.n }}</td></tr>
+    </table>
+  </template>
+</template>

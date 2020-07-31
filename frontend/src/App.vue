@@ -1,0 +1,30 @@
+<script setup>
+import { ref, computed } from 'vue'
+import { auth } from './api'
+import Login from './views/Login.vue'
+import Dashboard from './views/Dashboard.vue'
+import Requests from './views/Requests.vue'
+import Lots from './views/Lots.vue'
+import Issues from './views/Issues.vue'
+import Erp from './views/Erp.vue'
+
+const authed = ref(!!auth.token)
+const view = ref('dashboard')
+const nav = [['dashboard', 'Dashboard'], ['requests', 'Requests'], ['lots', 'Lots'], ['issues', 'Issues'], ['erp', 'ERP sync']]
+const comps = { dashboard: Dashboard, requests: Requests, lots: Lots, issues: Issues, erp: Erp }
+const current = computed(() => comps[view.value])
+function logout() { auth.set(''); authed.value = false }
+</script>
+
+<template>
+  <Login v-if="!authed" @done="authed = true" />
+  <div v-else class="shell">
+    <aside>
+      <div class="brand">Prototype<br />Management</div>
+      <button v-for="[k, label] in nav" :key="k" :class="{ on: view === k }" @click="view = k">{{ label }}</button>
+      <div class="spacer"></div>
+      <button @click="logout">Log out</button>
+    </aside>
+    <main><component :is="current" :key="view" /></main>
+  </div>
+</template>
