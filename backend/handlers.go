@@ -427,3 +427,5 @@ func (s *Server) erpWorkOrder(c *gin.Context) {
 	s.logSync("OUT", "Work Order", "OK", lotNo+" -> "+name)
 	c.JSON(http.StatusCreated, gin.H{"work_order": name})
 }
+
+// メモ 002: 申請から完了までの状態遷移を確認。画面とAPIのデータ項目を照合。

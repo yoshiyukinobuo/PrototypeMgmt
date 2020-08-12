@@ -48,3 +48,4 @@ Work order creation sends only item, qty, company and a description; your ERPNex
 
 ### 作業メモ
 - 2020-08-03：試作依頼 — 依頼登録画面の入力条件を整理（レビュー用メモ 001）
+- 2020-08-12：依頼ステータス — 依頼ステータス更新処理の仕様を整理（レビュー用メモ 002）
