@@ -110,3 +110,5 @@ onMounted(load)
     </table>
   </section>
 </template>
+
+// メモ 003: ロット番号と依頼情報の関連付けを確認。エラー時の利用者向け表示を確認。
