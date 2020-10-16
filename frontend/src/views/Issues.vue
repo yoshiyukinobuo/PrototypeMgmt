@@ -42,3 +42,5 @@ onMounted(load)
     </tr>
   </table>
 </template>
+
+// メモ 009: 重要度と対応状況の区分を確認。APIレスポンスとの対応を確認。
