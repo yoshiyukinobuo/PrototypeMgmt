@@ -119,3 +119,5 @@ func (e *ERPNext) CreateWorkOrder(ctx context.Context, wo WorkOrder) (string, er
 	}
 	return out.Data.Name, nil
 }
+
+// メモ 011: ERPNextとの接続設定と認証情報を確認。運用時の注意点を整理。
