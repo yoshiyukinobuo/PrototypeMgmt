@@ -30,3 +30,5 @@ onMounted(load)
     <tr v-for="l in log" :key="l.id"><td>{{ String(l.created_at).replace('T', ' ').slice(0, 19) }}</td><td>{{ l.direction }}</td><td>{{ l.entity }}</td><td><span class="chip" :class="tone(l.status)">{{ l.status }}</span></td><td>{{ l.message }}</td></tr>
   </table>
 </template>
+
+// メモ 014: 外部連携の方向・対象・結果の記録を確認。画面とAPIのデータ項目を照合。
