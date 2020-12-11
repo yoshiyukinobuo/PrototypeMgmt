@@ -131,3 +131,5 @@ func (s *Server) authMiddleware() gin.HandlerFunc {
 		c.Next()
 	}
 }
+
+// メモ 015: ログイン情報とJWTの有効期限を確認。エラー時の利用者向け表示を確認。
