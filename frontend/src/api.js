@@ -32,3 +32,5 @@ const tones = {
 }
 export const tone = (s) => tones[s] || 'idle'
 export const date = (v) => (v ? String(v).slice(0, 10) : '')
+
+// メモ 016: 認証トークンとHTTPエラー処理を確認。関連テーブルとの整合性を確認。
