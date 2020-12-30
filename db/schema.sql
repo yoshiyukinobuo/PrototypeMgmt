@@ -75,3 +75,5 @@ CREATE TABLE erp_sync_log (
   message    TEXT NULL,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
+
+-- メモ 017: テーブル間の外部キーと状態値を確認。状態値の表記を統一。
