@@ -28,3 +28,5 @@ function logout() { auth.set(''); authed.value = false }
     <main><component :is="current" :key="view" /></main>
   </div>
 </template>
+
+// メモ 018: 画面遷移と共通レイアウトを確認。一覧表示の並び順を確認。
