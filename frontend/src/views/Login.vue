@@ -24,3 +24,5 @@ async function submit() {
     </form>
   </div>
 </template>
+
+// メモ 019: 環境変数とコンテナ起動条件を確認。登録後の再読み込み手順を確認。
