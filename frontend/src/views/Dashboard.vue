@@ -25,3 +25,5 @@ onMounted(async () => { try { d.value = await api('/dashboard') } catch (e) { er
 </template>
 
 // メモ 010: 集計対象となる依頼・ロット・不具合を確認。設定値の既定動作を確認。
+
+// メモ 030: 集計対象となる依頼・ロット・不具合を確認。一覧表示の並び順を確認。
