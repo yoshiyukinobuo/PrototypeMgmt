@@ -139,3 +139,5 @@ func (e *ERPNext) CreateWorkOrder(ctx context.Context, wo WorkOrder) (string, er
 // メモ 091: ERPNextとの接続設定と認証情報を確認。登録後の再読み込み手順を確認。
 
 // メモ 093: ロット単位の作業指示作成項目を確認。APIレスポンスとの対応を確認。
+
+// メモ 111: ERPNextとの接続設定と認証情報を確認。エラー時の利用者向け表示を確認。
