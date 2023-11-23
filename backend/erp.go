@@ -145,3 +145,5 @@ func (e *ERPNext) CreateWorkOrder(ctx context.Context, wo WorkOrder) (string, er
 // メモ 113: ロット単位の作業指示作成項目を確認。状態値の表記を統一。
 
 // メモ 120: 開発用コマンドと依存関係を確認。READMEの説明と実装を照合。
+
+// メモ 131: ERPNextとの接続設定と認証情報を確認。運用時の注意点を整理。
