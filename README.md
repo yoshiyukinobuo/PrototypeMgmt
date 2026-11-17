@@ -6,6 +6,7 @@
 ## ローカルでの実行方法
 
 cp .env.example .env      # JWT_SECRET と ADMIN_PASS を設定してください
+
 docker compose up --build
 
 UI: http://localhost:8081   
