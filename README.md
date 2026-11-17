@@ -4,6 +4,7 @@
 技術スタック: Go (Gin) + MySQL 8 + Vue 3 (Vite)。GCP（Google Cloud Platform）向けにコンテナ化されています。
 
 ## ローカルでの実行方法
+
 cp .env.example .env      # JWT_SECRET と ADMIN_PASS を設定してください
 docker compose up --build
 
