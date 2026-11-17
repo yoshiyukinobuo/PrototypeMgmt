@@ -6,7 +6,9 @@
 ## ローカルでの実行方法
 cp .env.example .env      # JWT_SECRET と ADMIN_PASS を設定してください
 docker compose up --build
-# UI: http://localhost:8081   ログイン: admin / <ADMIN_PASS>
+
+UI: http://localhost:8081   
+ログイン: admin / <ADMIN_PASS>
 
 `ERP_URL` を空のままにすると、バックエンドはモック（擬似）ERPを使用するため、ERP環境がなくてもすべての画面が動作します。
 
